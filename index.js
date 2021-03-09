@@ -7,7 +7,7 @@
 const { Platform, NativeModules } = require('react-native');
 const RNDataWedgeIntents = NativeModules.DataWedgeIntents;
 
-let DataWedgeIntents = {}
+let DataWedgeIntents = undefined;
 
 try {
     DataWedgeIntents = {
@@ -42,7 +42,5 @@ try {
 } catch (error) {
     console.error("DataWedgeIntents is not available", error);
 }
-
-
 
 module.exports = DataWedgeIntents;
